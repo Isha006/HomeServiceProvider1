@@ -1,0 +1,54 @@
+page-servicearea {
+
+.toolbar-title{color:#02a499;font-size: 15px !important; font-weight: normal; text-transform: uppercase;}
+.back-button{color:#02a499;}
+
+.box{
+p{color:#00857c; margin: 0px; }
+
+	ion-item{
+		padding: 0;
+
+		.item-inner{border-bottom: 0px !important;
+
+			ion-label{    color: #8d8d8d;}
+
+		}
+	
+ion-toggle{
+	
+	  width: 44px;
+    height: 20px;
+
+    .toggle-icon{
+    	
+    	.toggle-inner{
+    		    background-color: #fff;
+    border: 1px solid #dadada;
+    left: 4px;
+    top: 0px;
+    border-radius: 50%;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -9px;
+    	}
+    }
+}
+
+}
+
+}
+
+
+
+}
+
+.toggle-md.toggle-checked .toggle-icon {
+    background-color: #00857c;
+}
+.toggle-md .toggle-icon {
+   
+    background-color: #666666;
+   
+}

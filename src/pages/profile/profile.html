@@ -1,0 +1,69 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header color="theme">
+ 
+ <ion-toolbar>
+    
+    <ion-title text-center class="header-title">PROFILE </ion-title>
+   <ion-buttons end>
+      <button ion-button icon-only (click)="editprofile()">
+      
+      </button>
+      </ion-buttons>
+        
+      
+    
+    
+
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content >
+
+<div class="profilebx">
+  <div class="profilepic">
+    <!--<img src="/assets/imgs/Profile.png"/>-->
+
+    <img *ngIf="this.image == '' || this.image == undefined" src="/assets/imgs/Profile.png" />
+    <img *ngIf="this.image != ''" [src]="this.image" />
+    <!--<img *ngIf="this.prfimage == '' || this.prfimage == undefined" src="/assets/imgs/Profile.png">-->
+
+    <button ion-button (click)="editprofile()" class="edit_btn"><ion-icon ios="ios-create" md="md-create"></ion-icon></button>
+  </div>
+  <h1>{{this.name}}</h1>
+  <p>{{this.phone}}</p>
+</div>
+
+<ion-list padding class="box">
+<ion-item > 
+    
+
+  <ion-label > GEOLOCATION</ion-label>
+  <ion-toggle [(ngModel)]="pepperoni"  checked="false"></ion-toggle>
+
+
+
+  </ion-item >
+  <ion-item (click)="idproofs()"> 
+     ID CARD WITH PHOTOS
+  </ion-item>
+   <ion-item  (click)="servicearea()"> 
+  ADD YOUR SERVICE LOCATION
+  </ion-item>
+  <ion-item (click)="aboutme()"> 
+       ABOUT ME
+  </ion-item>
+
+  <button ion-button block round color="theme" >SUBMIT FOR APPROVAL</button>
+  
+</ion-list>
+
+
+
+</ion-content>

@@ -1,0 +1,89 @@
+page-idproofs {
+
+.toolbar-title{color:#02a499;font-size: 15px !important; font-weight: normal; text-transform: uppercase;}
+.back-button{color:#02a499;}
+
+.box{
+	ion-item{
+		padding: 0px;
+		.item-inner{border-bottom: 0px !important;}
+	}
+	
+	p{
+		color: #02a499;
+	}
+
+	.upld .label {
+
+		#file-input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: 999;
+}
+
+.fle {
+	    padding: 0;
+    height: 58px;
+    width: 58px;
+    border: 2px dotted #d6d6d6;
+    font-size: 11px;
+    font-weight: 400;
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
+    letter-spacing: 0.0625em;
+    position: relative;
+    font-family: 'Lora', serif;
+    float: none;
+    display: table;
+    border-radius: 0px;
+    border-width: 2px;
+   
+    text-align: center;
+
+    ion-icon {
+     
+    font-size: 22px;
+    line-height: 58px;
+}
+
+.image_upld {
+    position: absolute;
+    top: 6px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto !important;
+    text-align: center;
+    font-size: 26px;
+    padding: 0 !important;
+}
+
+
+
+}
+
+
+
+    margin: 0 !important;
+		}
+	
+
+
+}
+.input-wrapper ion-label div {
+    height: 58px;
+    width: 58px;
+    float: left;
+    border: 2px solid #fff;
+}
+.input-wrapper ion-label div img {
+    height: 100%;
+    width: 100%;
+}
+
+}

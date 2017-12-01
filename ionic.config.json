@@ -1,0 +1,8 @@
+{
+  "name": "Home-Service-Provider",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

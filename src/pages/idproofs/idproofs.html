@@ -1,0 +1,39 @@
+<!--
+  Generated template for the IdproofsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title class="header-title">ID PROOFS</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<div class="box">
+<p>Upload one or more Govt. approved IDs
+</p>
+
+<ion-item class="upld">
+    
+  <!--<input id="file-input" (click)="openActionSheet()">-->
+  <div *ngFor="let im of image">
+    <img *ngIf="im.Userdoc.image != ''" src="{{im.Userdoc.image}}" />
+      <!--<img *ngIf="im.Userdoc.image == ''" src="" />-->
+  </div>
+  <div for="file" class="fle">
+    <ion-icon ios="ios-add-circle-outline" md="md-add-circle" (click)="openActionSheet()"></ion-icon>
+  </div>
+
+  
+</ion-item>
+
+ <button ion-button block round color="theme" (click)="pro()">SAVE</button>
+</div>
+
+</ion-content>

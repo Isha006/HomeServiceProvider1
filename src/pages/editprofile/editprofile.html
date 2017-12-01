@@ -1,0 +1,91 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <!--<button ion-button (click)="pro()">Toggle Menu</button>-->
+    <ion-icon ios="ios-arrow-round-back" md="md-arrow-round-back" (click)="pro()"></ion-icon>
+    <ion-title class="header-title">Edit Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div class="profilepic">
+    <img *ngIf="this.dimage == '' || this.dimage == undefined" src="/assets/imgs/Profile.png" (click)="openActionSheet()" />
+    <img *ngIf="this.dimage != ''" [src]="this.dimage" (click)="openActionSheet()" />
+
+
+  </div>
+
+  <div class="form-sec">
+    <form #edit="ngForm">
+      <ion-list>
+
+        <ion-item>
+					<ion-label floating>First Name</ion-label>
+					<ion-input type="text" name="firstname" pattern="[a-zA-Z ]+" [(ngModel)]="data.firstname" id="firstname" #firstname="ngModel"
+                    required></ion-input>
+				</ion-item>
+				<ion-label class="alert alert-danger" color="danger">
+                  <div *ngIf="firstname.errors && (firstname.dirty || firstname.touched)">
+                    <div [hidden]="!firstname.errors.required">
+                      First Name is required
+                    </div>
+                    <div [hidden]="!firstname.errors.pattern">
+                      Only alphabets are allowed
+                    </div>
+                  </div>
+                </ion-label>
+
+				<ion-item>
+					<ion-label floating>Last Name</ion-label>
+					<ion-input type="text" name="lastname" pattern="[a-zA-Z ]+" [(ngModel)]="data.lastname" id="lastname" #lastname="ngModel"
+                    required></ion-input>
+				</ion-item>
+				<ion-label class="alert alert-danger" color="danger">
+                  <div *ngIf="lastname.errors && (lastname.dirty || lastname.touched)">
+                    <div [hidden]="!lastname.errors.required">
+                      Last Name is required
+                    </div>
+                    <div [hidden]="!lastname.errors.pattern">
+                      Only alphabets are allowed
+                    </div>
+                  </div>
+                </ion-label>
+
+        <ion-item>
+          <ion-label floating>Mobile Number</ion-label>
+          <ion-input type="tel" name="phone" [(ngModel)]="data.phone" id="phone" #phone="ngModel" pattern='[0-9]+' maxlength="10" required></ion-input>
+        </ion-item>
+        <ion-label class="alert alert-danger" color="danger">
+
+          <div *ngIf="phone.errors && (phone.dirty || phone.touched)">
+            <div [hidden]="!phone.errors.required">
+              Field is required
+            </div>
+            <div [hidden]="!phone.errors.pattern">
+              Invalid Format
+            </div>
+            <div [hidden]="!phone.errors.maxlength">
+              Maximum 10 number
+            </div>
+          </div>
+        </ion-label>
+
+
+
+      </ion-list>
+      <button ion-button block round color="theme" class="btns" type="submit" (click)="edit_profile(edit)" [disabled]="!edit.form.valid">SAVE</button>
+    </form>
+
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,71 @@
+page-ongoing {
+.toolbar-background{
+   
+    background: #fff;
+    
+}
+ion-header { z-index: 1;  }
+.toolbar-title{color:#02a499;font-size: 15px !important; font-weight: normal; text-transform: uppercase;}
+.back-button{color:#02a499;}
+
+.segmentheader{
+	
+	ion-segment{
+
+		    background: #f2f2f2;
+		    .segment-button{
+    		color: #858585;
+    		background-color: transparent;
+    		text-transform: capitalize;
+    		font-weight: normal;
+    		font-size: 13px;
+    		border-bottom: none;
+		    }
+	}
+
+}
+
+.tabbing{
+	
+	.box{
+		ion-list{    margin-bottom: 10px;
+
+		ion-item{
+			    border-bottom: 2px solid #cccccc !important;
+			    padding-bottom: 8px;
+			        padding-left: 0;
+				.item-inner{
+					ion-label{margin: 0;}
+				}
+		}
+
+		}
+		
+		h2{color: #8d8d8d; font-size: 16px;margin: 0px 0 5px 0;text-transform: capitalize;}
+		h3{
+			    margin: 3px 0;
+			span{float: right; }
+		}
+		h3,p{color: #8dbcb7;margin: 0;
+			span{float: right;}
+		}
+	}
+}
+
+}
+
+.segment-md .segment-button.activated, .segment-md .segment-button.segment-activated {
+        border: none !important;
+   
+    color: #02a499;
+}
+.segment-ios .segment-button.segment-activated{
+	 border: none !important ;
+   background-color: #e8e8e8 !important;
+    color: #02a499;
+}
+.segment-ios .segment-button:first-of-type{border-radius: 0px !important;}
+.segment-ios .segment-button{border-color:#e8e8e8;}
+.toolbar-title{
+    overflow: unset; text-overflow: unset;}
+    .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block{border-bottom: none;}

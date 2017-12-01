@@ -1,0 +1,232 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+	<ion-navbar>
+		<ion-title class="header-title">SIGN UP</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+	<div class="form-sec">
+		<form #signup="ngForm">
+			<ion-list>
+				<ion-item>
+					<ion-label floating>First Name</ion-label>
+					<ion-input type="text" name="firstname" pattern="[a-zA-Z ]+" [(ngModel)]="data.firstname" id="firstname" #firstname="ngModel"
+                    required></ion-input>
+				</ion-item>
+				<ion-label class="alert alert-danger" color="danger">
+                  <div *ngIf="firstname.errors && (firstname.dirty || firstname.touched)">
+                    <div [hidden]="!firstname.errors.required">
+                      First Name is required
+                    </div>
+                    <div [hidden]="!firstname.errors.pattern">
+                      Only alphabets are allowed
+                    </div>
+                  </div>
+                </ion-label>
+
+				<ion-item>
+					<ion-label floating>Last Name</ion-label>
+					<ion-input type="text" name="lastname" pattern="[a-zA-Z ]+" [(ngModel)]="data.lastname" id="lastname" #lastname="ngModel"
+                    required></ion-input>
+				</ion-item>
+				<ion-label class="alert alert-danger" color="danger">
+                  <div *ngIf="lastname.errors && (lastname.dirty || lastname.touched)">
+                    <div [hidden]="!lastname.errors.required">
+                      Last Name is required
+                    </div>
+                    <div [hidden]="!lastname.errors.pattern">
+                      Only alphabets are allowed
+                    </div>
+                  </div>
+                </ion-label>
+
+				<ion-item>
+					<ion-label floating>Email Address</ion-label>
+					<ion-input type="email" name="email" [(ngModel)]="data.email" id="email" #email="ngModel" pattern='^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$'
+                    required></ion-input>
+				</ion-item>
+				 <ion-label class="alert alert-danger" color="danger">
+                  <div *ngIf="email.errors && (email.dirty || email.touched)">
+                    <!--<img class="tick" item-right src="assets/imgs/tickwrg.png">-->
+                    <div [hidden]="!email.errors.required">
+                      Email is required
+                    </div>
+                    <div [hidden]="!email.errors.pattern">
+                      In-valid email
+                    </div>
+                  </div>
+                  <!--<div *ngIf="!email.errors && (!email.dirty || !email.touched)">
+                    <img class="tick" item-right src="assets/imgs/tickryt.png">
+                  </div>-->
+                </ion-label>
+
+				<ion-item>
+					<ion-label floating>Mobile Number</ion-label>
+					<ion-input type="tel" name="phone" [(ngModel)]="data.phone" id="phone" #phone="ngModel" pattern='[0-9]+' maxlength="10" minlength="10" required></ion-input>
+				</ion-item>
+				<ion-label class="alert alert-danger" color="danger">
+
+					<div *ngIf="phone.errors && (phone.dirty || phone.touched)">
+						<div [hidden]="!phone.errors.required">
+							Field is required
+						</div>
+						<div [hidden]="!phone.errors.pattern">
+							Invalid Format
+						</div>
+						<div [hidden]="!phone.errors.minlength">
+							Minimum 10 number
+						</div>
+                                            <div [hidden]="!phone.errors.maxlength">
+							Maximum 10 number
+						</div>
+					</div>
+				</ion-label>
+
+				<ion-item>
+					<ion-label floating>Profession</ion-label>
+					<ion-input type="text" name="profession" [(ngModel)]="data.profession" id="profession" #profession="ngModel"
+                    required></ion-input>
+				</ion-item>
+				<ion-label class="alert alert-danger" color="danger">
+                  <div *ngIf="profession.errors && (profession.dirty || profession.touched)">
+                    <div [hidden]="!profession.errors.required">
+                     Profession is required
+                    </div>
+                    <!--<div [hidden]="!profession.errors.pattern">
+                      Only alphabets are allowed
+                    </div>-->
+                  </div>
+                </ion-label>
+
+				<ion-item>
+					<ion-label floating>National Identity / Passport No.</ion-label>
+					<ion-input type="text" name="pass" [(ngModel)]="data.pass" id="pass" #pass="ngModel"
+                    required></ion-input>
+				</ion-item>
+				<ion-label class="alert alert-danger" color="danger">
+                  <div *ngIf="pass.errors && (pass.dirty || pass.touched)">
+                    <div [hidden]="!pass.errors.required">
+                     National Identity / Passport No. is required
+                    </div>
+                    <!--<div [hidden]="!profession.errors.pattern">
+                      Only alphabets are allowed
+                    </div>-->
+                  </div>
+                </ion-label>
+
+				<ion-item>
+					<ion-label floating>Institution of Highest Study</ion-label>
+					<ion-input type="text"  name="institution" [(ngModel)]="data.institution" id="institution" #institution="ngModel"
+                    required></ion-input>
+				</ion-item>
+				<ion-label class="alert alert-danger" color="danger">
+                  <div *ngIf="institution.errors && (institution.dirty || institution.touched)">
+                    <div [hidden]="!institution.errors.required">
+                    Institution is required
+                    </div>
+                    <!--<div [hidden]="!profession.errors.pattern">
+                      Only alphabets are allowed
+                    </div>-->
+                  </div>
+                </ion-label>
+
+				<ion-item>
+					<ion-label floating>Course Undertaken</ion-label>
+					<ion-input type="text" name="course" [(ngModel)]="data.course" id="course" #course="ngModel"
+                    required></ion-input>
+				</ion-item>
+				<ion-label class="alert alert-danger" color="danger">
+                  <div *ngIf="course.errors && (course.dirty || course.touched)">
+                    <div [hidden]="!course.errors.required">
+                    Course is required
+                    </div>
+                    <!--<div [hidden]="!profession.errors.pattern">
+                      Only alphabets are allowed
+                    </div>-->
+                  </div>
+                </ion-label>
+
+				<ion-item>
+					<ion-label floating>Certificate Awarded</ion-label>
+					<ion-input type="text" name="certificate" [(ngModel)]="data.certificate" id="certificate" #certificate="ngModel"
+                    required></ion-input>
+				</ion-item>
+				<ion-label class="alert alert-danger" color="danger">
+                  <div *ngIf="certificate.errors && (certificate.dirty || certificate.touched)">
+                    <div [hidden]="!certificate.errors.required">
+                    Certificate is required
+                    </div>
+                    <!--<div [hidden]="!profession.errors.pattern">
+                      Only alphabets are allowed
+                    </div>-->
+                  </div>
+                </ion-label>
+
+        <ion-item>
+          <ion-label floating>Years of Graduation / Completion</ion-label>
+          <!--<ion-input type="text" name="c_year" [(ngModel)]="data.c_year" id="c_year" #c_year="ngModel" 
+                    required></ion-input>-->
+          <ion-datetime displayFormat="YYYY" [(ngModel)]="data.c_year" name="c_year" id="c_year" #c_year="ngModel" required>
+          </ion-datetime>
+        </ion-item>
+        <ion-label class="alert alert-danger" color="danger">
+          <div *ngIf="c_year.errors && (c_year.dirty || c_year.touched)">
+            <div [hidden]="!c_year.errors.required">
+              Field is required
+            </div>
+            <!--<div [hidden]="!profession.errors.pattern">
+                      Only numbers are allowed
+                    </div>-->
+          </div>
+        </ion-label>
+
+        <ion-item>
+          <ion-label floating>Work Experince in Years</ion-label>
+          <ion-input type="text" name="exp" [(ngModel)]="data.exp" id="exp" #exp="ngModel" pattern='[0-9]+' required></ion-input>
+        </ion-item>
+        <ion-label class="alert alert-danger" color="danger">
+          <div *ngIf="exp.errors && (exp.dirty || exp.touched)">
+            <div [hidden]="!exp.errors.required">
+              Field is required
+            </div>
+            <div [hidden]="!exp.errors.pattern">
+                      Only numbers are allowed
+                    </div>
+          </div>
+        </ion-label>
+
+				<ion-item>
+					<ion-label floating>Provider Type</ion-label>
+					<ion-select [(ngModel)]="data.provider_type" name="provider_type" id="provider_type" #provider_type="ngModel" required>
+						<ion-option value="individual">Individual</ion-option>
+						<ion-option value="company">Company</ion-option>
+						<ion-option value="both">Both</ion-option>
+					</ion-select>
+				</ion-item>
+				<!--<ion-label class="alert alert-danger" color="danger">
+					<div *ngIf="provider_type.errors && (provider_type.dirty || provider_type.touched)">
+						<div [hidden]="!provider_type.errors.required">
+							Field is required
+						</div>
+					</div>
+				</ion-label>-->
+
+			</ion-list>
+			<button ion-button block round color="theme" class="btns" type="submit" (click)="signup_form(signup)" [disabled]="!signup.form.valid">NEXT</button>
+		</form>
+		<!--<button ion-button block round color="theme" class="btns" (click)="">NEXT</button>-->
+		<button ion-button block round class="current btns" (click)="signin()">EXISTING USER ? SIGN IN</button>
+	</div>
+
+</ion-content>

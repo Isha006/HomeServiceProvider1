@@ -1,0 +1,30 @@
+page-contactus {
+.toolbar-title{color:#02a499;font-size: 15px !important; font-weight: normal; text-transform: uppercase;}
+.back-button{color:#02a499;}
+
+.contact{
+
+	ion-item{
+
+		padding: 0px;
+	
+
+		.item-inner{
+			&:last-child.item-inner{border-bottom:1px solid #dedede;}
+			.ion-md-arrow-forward:before, .ion-ios-arrow-forward:before{
+    		font-size: 18px;
+    		font-weight: normal;
+    		color: #b7b7b7;
+			}
+		}
+	}
+
+}
+
+
+
+}
+
+.list-ios > .item-block:first-child {
+    border-top:none;
+}

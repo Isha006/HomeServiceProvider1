@@ -1,0 +1,49 @@
+page-signin {
+
+.toolbar-title{color:#02a499;font-size: 15px !important; font-weight: normal; text-transform: uppercase;}
+.back-button{color:#02a499;}
+ion-navbar{
+		.back-button{
+			display:none !important;
+		}
+		.toolbar-content{
+			ion-icon{
+				width: 44px;
+				display: inline-block;
+				height: 32px;
+				float: left;
+				line-height: 32px;
+				text-align: center;
+				color: #02a499;
+			}
+			ion-title{
+				line-height: 32px;
+			}
+		}
+}
+
+	.form-sec{
+			form{
+				    margin: 0 0 20px 0;
+				ion-list{
+					margin:0px;
+					ion-item{
+						padding:0px;
+						button{
+							float: right;
+							margin: 0px;
+							background: none;
+							box-shadow: none;
+							color: #02a499;
+							text-transform: capitalize;
+						}
+					}
+				}
+				button{
+					margin:0px;
+					border-radius:100px;
+				}
+			}
+		}
+
+}

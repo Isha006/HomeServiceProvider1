@@ -1,0 +1,59 @@
+page-aboutme {
+
+.toolbar-title{color:#02a499;font-size: 15px !important; font-weight: normal; text-transform: uppercase;}
+.back-button{color:#02a499;}
+
+.chklist{
+		p{margin: 0;}
+		ion-item{padding: 0;
+			    min-height: 2.4rem;
+		border-bottom: none !important;
+		ion-checkbox{
+			margin: 0px 6px 0px 4px !important;
+			.checkbox-icon{
+				border-radius: unset !important;
+				width: 10px;
+    			height: 10px;
+    			border-width: 1px;
+    			border-style: solid;
+
+    			.checkbox-inner{
+    				     width: unset; 
+   						  height: unset; 
+    					border-width: 0px;
+    			}
+    			
+    			
+			}
+		}
+
+		}
+
+		.item-inner{
+			border-bottom: none !important;
+			ion-label{ margin: 3px 8px 3px 0 !important;
+				    font-size: 15px;
+                                    color: #66616b;
+                                    text-transform: capitalize;
+                                    letter-spacing: 1px;
+                                    font-weight: 500;
+			
+			}
+		}
+	}
+        .checkbox .checkbox-checked {
+    border-color: #02a499;;
+    background-color: #02a499;;
+}
+.checkbox .checkbox-checked {
+    border-color: #02a499;;
+    background-color: #02a499;;
+}
+.checkbox-ios .checkbox-icon {
+     border-radius: unset; 
+   
+}
+
+}
+
+

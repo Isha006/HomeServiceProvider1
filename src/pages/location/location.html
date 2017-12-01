@@ -1,0 +1,49 @@
+<!--
+  Generated template for the LocationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title class="header-title">location</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<div class="location">
+			<form #heroForm="ngForm">
+				<ion-list>
+					
+					<ion-item>
+						<ion-label floating>Enter Fixed Location</ion-label>
+						<!--<ion-input type="text" name="loc" [(ngModel)]="data.loc" id="loc" #loc="ngModel" required></ion-input>-->
+                                                <ion-input type="text" name="query" [(ngModel)]="autocomplete.query" (input)="updateSearch()" #query="ngModel" required></ion-input>
+					</ion-item>
+<!--					<ion-label class="alert alert-danger" color="danger">
+						<div *ngIf="loc.errors && (loc.dirty || loc.touched)">
+							<div [hidden]="!loc.errors.required">
+								Field is required
+							</div>
+							<div [hidden]="!loc.errors.pattern">
+								Only numbers are allowed
+							</div>
+						</div>
+					</ion-label>-->
+                                    
+                                    <ion-item *ngFor="let item of autocompleteItems" (click)="chooseItem(item)">{{ item.description }} </ion-item>
+				</ion-list>
+					<!--<button ion-button block round color="theme" (click)="fixed(locac)"  class="btns">SUBMIT</button>-->
+                                        
+                                        <button ion-button block round type="submit" color="theme" class="btns" [disabled]="!heroForm.form.valid" (click)="search(heroForm)">SUBMIT</button>
+                                        <!--<button ion-button block round class="current btns" (click)="getCurrentLocation()">USE MY CURRENT LOCATION</button>-->
+			</form>
+		
+
+		</div>
+
+</ion-content>

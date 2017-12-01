@@ -1,0 +1,54 @@
+page-signup {
+
+.toolbar-title{color:#02a499;font-size: 15px !important; font-weight: normal; text-transform: uppercase;}
+.back-button{color:#02a499;}
+
+.current{
+		background-color: #666666;
+	}
+	.btns{
+	color: #fff;
+    font-weight: normal;
+    font-size: 12px;
+    margin-bottom: 15px;
+
+	}
+
+.form-sec{
+			form{
+				    margin: 0 0 20px 0;
+				ion-list{
+					margin:0px;
+					ion-item{
+						padding:0px;
+						button{
+							float: right;
+							margin: 0px;
+							background: none;
+							box-shadow: none;
+							color: #02a499;
+							text-transform: capitalize;
+						}
+					}
+				}
+				button{
+					margin:0px;
+					border-radius:100px;
+				}
+			}
+		}
+                .button-md:hover:not(.disable-hover){
+                    background-color:#02a499 !important;
+                }
+
+}
+
+
+ion-item{
+		
+			padding: 0px;
+			.input-cover{ position: unset; }
+
+			
+   
+			}

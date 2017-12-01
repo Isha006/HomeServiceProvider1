@@ -1,0 +1,129 @@
+<!--
+  Generated template for the OngoingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title class="header-title">ongoing service request</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+	<div class="segmentheader">
+  <ion-segment [(ngModel)]="pet">
+    <ion-segment-button value="active" (click)="list_active()">
+      Active
+    </ion-segment-button>
+    <ion-segment-button value="completed" (click)="list_completed()">
+     Completed
+    </ion-segment-button>
+     <ion-segment-button value="cancelled" (click)="list_cancelled()">
+     Cancelled
+    </ion-segment-button>
+       <ion-segment-button value="distributed" (click)="list_distributed()">
+     Distributed
+    </ion-segment-button>
+  </ion-segment>
+</div>
+
+<div [ngSwitch]="pet" class="tabbing" padding>
+  <ion-list *ngSwitchCase="'active'">
+
+    <div class="box" *ngFor="let item of items">
+      <ion-list>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="{{item.User.image}}">
+          </ion-avatar>
+          <p>{{item.User.name}}</p>
+          <h3>{{item.Order.created}}</h3>
+          <br>
+          <div *ngFor="let it of item.OrderItem">
+            <p>{{it.name}}<span>{{it.price}}</span></p>
+            <br>
+            <!--<h3>{{it.created}}</h3>-->
+            
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'completed'">
+
+    <div class="box" *ngFor="let item of itemss">
+      <ion-list>
+       <ion-item>
+          <ion-avatar item-start>
+            <img src="{{item.User.image}}">
+          </ion-avatar>
+          <p>{{item.User.name}}</p>
+          <h3>{{item.Order.created}}</h3>
+          <br>
+          <div *ngFor="let it of item.OrderItem">
+            <p>{{it.name}}<span>{{it.price}}</span></p>
+            <br>
+            <!--<h3>{{it.created}}</h3>-->
+            
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+
+  </ion-list>
+
+<ion-list *ngSwitchCase="'cancelled'">
+
+    <div class="box" *ngFor="let item of itemsss">
+      <ion-list>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="{{item.User.image}}">
+          </ion-avatar>
+          <p>{{item.User.name}}</p>
+          <h3>{{item.Order.created}}</h3>
+          <br>
+          <div *ngFor="let it of item.OrderItem">
+            <p>{{it.name}}<span>{{it.price}}</span></p>
+            <br>
+            <!--<h3>{{it.created}}</h3>-->
+            
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+    
+  </ion-list>
+  <ion-list *ngSwitchCase="'distributed'">
+
+    <div class="box" *ngFor="let item of itemssss">
+      <ion-list>
+       <ion-item>
+          <ion-avatar item-start>
+            <img src="{{item.User.image}}">
+          </ion-avatar>
+          <p>{{item.User.name}}</p>
+          <h3>{{item.Order.created}}</h3>
+          <br>
+          <div *ngFor="let it of item.OrderItem">
+            <p>{{it.name}}<span>{{it.price}}</span></p>
+            <br>
+            <!--<h3>{{it.created}}</h3>-->
+            
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+
+  </ion-list>
+</div>
+
+
+</ion-content>
