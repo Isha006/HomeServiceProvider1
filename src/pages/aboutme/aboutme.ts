@@ -38,6 +38,10 @@ export class AboutmePage {
     console.log('ionViewDidLoad AboutmePage');
      this.list();
   }
+  
+  back(){
+      this.navCtrl.push(ProfilePage);
+  }
 
 pro(){
      this.navCtrl.push(ProfilePage);

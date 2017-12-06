@@ -23,6 +23,8 @@ import { CommonProvider } from '../providers/common/common';
 import { Http, HttpModule, RequestOptions, Headers} from '@angular/http';
 import { Camera, CameraOptions } from "@ionic-native/camera";
 import { EditprofilePage } from "../pages/editprofile/editprofile";
+import { ChatPage } from "../pages/chat/chat";
+
 
 @Component({
   templateUrl: 'app.html'

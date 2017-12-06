@@ -27,15 +27,19 @@
 <ion-content >
 
 <div class="profilebx">
-  <div class="profilepic">
+  <div class="profilepic" *ngIf="this.image == null">
     <!--<img src="/assets/imgs/Profile.png"/>-->
 
-    <img *ngIf="this.image == '' || this.image == undefined" src="/assets/imgs/Profile.png" />
-    <img *ngIf="this.image != ''" [src]="this.image" />
+    <img  src="/assets/imgs/Profile.png" />
+   
     <!--<img *ngIf="this.prfimage == '' || this.prfimage == undefined" src="/assets/imgs/Profile.png">-->
 
     <button ion-button (click)="editprofile()" class="edit_btn"><ion-icon ios="ios-create" md="md-create"></ion-icon></button>
   </div>
+    <div class="profilepic" *ngIf="this.image != null">
+         <img  [src]="this.image" />
+         <button ion-button (click)="editprofile()" class="edit_btn"><ion-icon ios="ios-create" md="md-create"></ion-icon></button>
+    </div>
   <h1>{{this.name}}</h1>
   <p>{{this.phone}}</p>
 </div>

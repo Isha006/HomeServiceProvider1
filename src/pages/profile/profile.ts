@@ -36,6 +36,7 @@ export class ProfilePage {
 //    this.image=this.navParams.get('image');
 //    this.phone=this.navParams.get('phone');
 this.user_id = localStorage.getItem('user_id');
+this.image='';
   }
 
   ionViewDidLoad() {

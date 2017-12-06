@@ -7,6 +7,7 @@
 <ion-header>
 
   <ion-navbar>
+      <ion-icon ios="ios-arrow-round-back" md="md-arrow-round-back" (click)="back()"></ion-icon>
     <ion-title class="header-title">GET REVIEWS</ion-title>
   </ion-navbar>
 
@@ -31,11 +32,11 @@
 
 <div class="whtsapp">
    
-    <button ion-button outline item-end icon-left>
+    <button ion-button outline item-end icon-left (click)="whatsApp()">
        <ion-icon ios="logo-whatsapp" md="logo-whatsapp"></ion-icon>
      Whatsapp
     </button>
-    <button ion-button outline item-end icon-left>
+    <button ion-button outline item-end icon-left (click)="sMs()">
       <ion-icon name="star"></ion-icon>
      FreeSMS
     </button>

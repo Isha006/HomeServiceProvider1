@@ -28,6 +28,9 @@ import { Camera, CameraOptions } from "@ionic-native/camera";
 import { EditprofilePage } from "../pages/editprofile/editprofile";
 import { NativeGeocoder, NativeGeocoderReverseResult, NativeGeocoderForwardResult } from '@ionic-native/native-geocoder';
 import { Geolocation } from '@ionic-native/geolocation';
+import { ChatPage } from "../pages/chat/chat";
+import { SocialSharing } from '@ionic-native/social-sharing';
+import { SMS } from '@ionic-native/sms';
 
 @NgModule({
   declarations: [
@@ -49,7 +52,8 @@ import { Geolocation } from '@ionic-native/geolocation';
     ReviewsPage,
     ContactusPage,
     LocationPage,
-	EditprofilePage
+	EditprofilePage,
+        ChatPage
   ],
   imports: [
     BrowserModule,
@@ -77,7 +81,8 @@ import { Geolocation } from '@ionic-native/geolocation';
     ReviewsPage,
     ContactusPage,
     LocationPage,
-	EditprofilePage
+	EditprofilePage,
+        ChatPage
   ],
   providers: [
     StatusBar,
@@ -86,7 +91,9 @@ import { Geolocation } from '@ionic-native/geolocation';
     CommonProvider,
     Camera,
     Geolocation,
-    NativeGeocoder
+    NativeGeocoder,
+    SocialSharing,
+    SMS
   ]
 })
 export class AppModule {}

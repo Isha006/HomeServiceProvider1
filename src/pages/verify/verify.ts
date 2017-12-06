@@ -66,7 +66,7 @@ phone: any;
           localStorage.setItem('user_id',sdata.data.User.id);
           localStorage.setItem('Name',sdata.data.User.name);
           localStorage.setItem('Image',sdata.data.User.image);
-          localStorage.setItem('Phone',sdata.data.User.phonenumber);
+          localStorage.setItem('PhoneNumber',sdata.data.User.phonenumber);
           
           
           let toast = this.toastCtrl.create({
@@ -76,11 +76,7 @@ phone: any;
           });
           toast.present();
 
-          this.navCtrl.push(TabsPage,{
-            name:localStorage.getItem('Name'),
-            phone:localStorage.getItem('Phone'),
-            image:localStorage.getItem('Image')
-          });
+          this.navCtrl.push(TabsPage);
         }
         else{
           console.log(sdata.msg);

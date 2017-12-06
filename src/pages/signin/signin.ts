@@ -48,7 +48,7 @@ export class SigninPage {
     var Serialized = this.common.serializeObj(data_form);
     console.log(Serialized);
     //  alert(JSON.stringify(Serialized));
-    console.log(data_form);
+//    console.log(data_form);
 
     this.http.post(this.common.base_url + 'users/getotp', Serialized, options)
       .map(res => res.json())

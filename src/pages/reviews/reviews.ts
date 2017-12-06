@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { MenuPage } from '../menu/menu';
+import { SMS } from '@ionic-native/sms';
 
 /**
  * Generated class for the ReviewsPage page.
@@ -15,11 +17,27 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ReviewsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+phone: any;
+  constructor(public navCtrl: NavController, public navParams: NavParams,private sms: SMS) {
+      this.phone=localStorage.getItem('PhoneNumber');
+//      alert(this.phone);
+  }
+  
+  back(){
+       this.navCtrl.push(MenuPage);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ReviewsPage');
   }
+  
+  sMs(){
+//      this.sms.send(this.phone, 'Hello world!');
+//alert(this.phone);
+      this.sms.send('+919056691461', 'Hello world!');
+  }
 
+    whatsApp(){
+        
+    }
 }

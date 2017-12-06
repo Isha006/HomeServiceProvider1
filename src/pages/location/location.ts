@@ -7,6 +7,8 @@ import { Geolocation } from '@ionic-native/geolocation';
 import {googlemaps} from 'googlemaps';
 import { NativeGeocoder, NativeGeocoderReverseResult, NativeGeocoderForwardResult } from '@ionic-native/native-geocoder';
 import { CommonProvider } from "../../providers/common/common";
+import { ProfilePage } from '../profile/profile';
+
 /**
  * Generated class for the LocationPage page.
  *
@@ -50,6 +52,10 @@ query: ''
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LocationPage');
+  }
+  
+  back(){
+      this.navCtrl.push(ProfilePage);
   }
   updateSearch() {
 console.log('modal > updateSearch');

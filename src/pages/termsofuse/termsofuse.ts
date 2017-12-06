@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 import { CommonProvider } from "../../providers/common/common";
 import 'rxjs/add/operator/map';
 import { HttpModule, Http, RequestOptions, Headers } from '@angular/http';
+import { MenuPage } from '../menu/menu';
 
 /**
  * Generated class for the TermsofusePage page.
@@ -30,6 +31,10 @@ export class TermsofusePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad TermsofusePage');
     this.load();
+  }
+  
+  back(){
+       this.navCtrl.push(MenuPage);
   }
 
   load()

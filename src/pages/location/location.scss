@@ -1,7 +1,35 @@
 page-location {
-
-.toolbar-title{color:#02a499;font-size: 15px !important; font-weight: normal; text-transform: uppercase;}
+ .header-title{
+        margin-right: 40px;
+    }
+.toolbar-title{
+    color:#02a499;
+    font-size: 15px !important; 
+     font-weight: bold; 
+ text-transform: uppercase;
+ width:100%;
+ text-align:center;
+}
 .back-button{color:#02a499;}
+ion-navbar{
+		.back-button{
+			display:none !important;
+		}
+		.toolbar-content{
+			ion-icon{
+				width: 44px;
+				display: inline-block;
+				height: 32px;
+				float: left;
+				line-height: 32px;
+				text-align: center;
+				color: #02a499;
+			}
+			ion-title{
+				line-height: 32px;
+			}
+		}
+}
 	.location{
 	h1{
 	 color: #8d8d8d;
